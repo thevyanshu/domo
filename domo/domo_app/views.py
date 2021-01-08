@@ -29,3 +29,9 @@ def test(request) :
 
 def contact_us(request):
     return render(request, 'domo_app/contact_us.html')
+
+def ngo(request):
+    return render(request, 'domo_app/ngo.html')
+
+def services(request) :
+    return render(request, 'domo_app/services.html')

@@ -1,5 +1,6 @@
 <DOCTYPE html>
-<{% load static %}
+{% load static %}
+{% load admin_urls %}
 <html>
     <head>
         <meta charset="utf-8">
@@ -16,14 +17,14 @@
     </head>
     <body>
     <nav class="navbar navbar-light navbar-expand-md fixed-top navigation-clean" style="background: rgb(26,26,26);height: 50px;">
-        <div class="container"><a class="navbar-brand" href="#" style="color: rgb(255,255,255);">DOMO DiGi</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container"><a class="navbar-brand" href="{% url 'domo_app:index' %}" style="color: rgb(255,255,255);">DOMO DiGi</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div
                 class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#" style="color: rgb(171,171,171);">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" style="color: rgb(171,171,171);">NGO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'domo_app:services' %}" style="color: rgb(171,171,171);">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'domo_app:ngo' %}" style="color: rgb(171,171,171);">NGO</a></li>
                     <li class="nav-item"><a class="nav-link" href="#" style="color: rgb(171,171,171);">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" style="color: rgb(171,171,171);">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'domo_app:test' %}" style="color: rgb(171,171,171);">Contact Us</a></li>
                 </ul>
         </div>
         </div>
