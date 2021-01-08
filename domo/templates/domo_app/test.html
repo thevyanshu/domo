@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'domo_app/base.html' %}
+    {% block body_block %}
+    <section>
+    <div class="container" id="container"></div>
+    </section>
+    <div class="register-photo">
+        <div class="form-container">
+            <div class="image-holder"></div>
+            <form method="post">
+                {% csrf_token %}
+                <h2 class="text-center">Request a Quote</h2>
+                {{ form.as_p }}
+                <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Submit</button></div>
+            </form>
+        </div>
+    </div>
+    <div></div>
+    <section></section>
+    <section></section>
+    {% endblock %}
