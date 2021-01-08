@@ -28,4 +28,4 @@ def test(request) :
     return render(request, 'domo_app/test.html', {'form':form})
 
 def contact_us(request):
-    return render(request, 'domo_app/contact-us.html')
+    return render(request, 'domo_app/contact_us.html')
