@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from domo_app import forms
+from domo_app.models import User
 
 # Create your views here.
 
@@ -17,4 +18,11 @@ def test(request) :
             print("NAME: " + form.cleaned_data['name'])
             print("EMAIL: " + form.cleaned_data['email'])
             print("CONTACT NUMBER: " + form.cleaned_data['contact_number'])
+            users = User()
+            users.name = form.cleaned_data['name']
+            users.email = form.cleaned_data['email']
+            users.contact_number = form.cleaned_data['contact_number']
+            users.save()
+        else:
+            form = forms.FormName()
     return render(request, 'domo_app/test.html', {'form':form})
